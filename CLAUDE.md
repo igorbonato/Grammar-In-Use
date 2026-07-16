@@ -30,3 +30,5 @@ O material base está dividido em dezenas de PDFs. O processo de desenvolvimento
    * Barra de progresso global (ex: "4 of 145 units completed").
 2. **Sistema de Resolução Interativa:** Inputs devem se auto-ajustar ou ter tamanho padrão. O usuário digita as palavras faltantes e submete.
 3. **Gestão de Progresso:** Ao clicar em "Check Answers" e acertar, o Supabase registra a Unidade como concluída e libera a navegação para a "Next unit".
+
+@AGENTS.md
