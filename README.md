@@ -6,7 +6,7 @@ Versão web interativa do *English Grammar in Use*, focada em alta retenção e 
 
 - **Front-end:** React (Vite) + TypeScript, Tailwind CSS
 - **Roteamento:** React Router (`/modulo/:moduleId/:unitId`)
-- **Back-end / Banco de dados:** Supabase (PostgreSQL) — em modelagem
+- **Back-end / Banco de dados:** Supabase (PostgreSQL)
 - **Deploy:** Vercel
 
 ## Estrutura do repositório
@@ -22,7 +22,7 @@ src/              Aplicação front-end (Vite + React + Tailwind) — raiz do pr
 pdf/              Material bruto original (PDFs do livro), usado como fonte para
                   ingestão de conteúdo. Não versionado no Git — ver abaixo.
 
-supabase/         Migrations do schema do banco (a criar no próximo marco)
+supabase/         Migrations do schema do banco (Supabase CLI)
 tools/ingestion/  Scripts de extração/seed de conteúdo dos PDFs (a criar)
 ```
 
@@ -42,7 +42,7 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
 ## Status do desenvolvimento
 
 - [x] **Marco 1** — Refatoração do front-end em componentes modulares
-- [ ] **Marco 2** — Modelagem do banco de dados no Supabase
+- [x] **Marco 2** — Modelagem do banco de dados no Supabase (`supabase/migrations/0001_init.sql`)
 - [ ] **Marco 3** — Integração de estado (Zustand + TanStack Query) e Supabase Auth anônima
 - [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo
 
