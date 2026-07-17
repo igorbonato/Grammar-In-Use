@@ -80,7 +80,7 @@ export default function ExerciseItem({ sentence, index, answers, checked, hintVi
               <div className="mt-2 flex items-center gap-2">
                 <span className="text-[12px] text-gray-400">Correct answer:</span>
                 <span className="text-[13px] font-semibold text-green-700 bg-green-50 px-2 py-0.5 rounded-md border border-green-100">
-                  {sentence.blanks.map(blank => blank.correctAnswer).join(' / ')}
+                  {sentence.blanks.map(blank => blank.correctAnswer || '(no word needed)').join(' / ')}
                 </span>
               </div>
             )}

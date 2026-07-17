@@ -8,14 +8,18 @@ function normalize(value: string): string {
 
 export function isBlankCorrect(blank: ExerciseBlank, value: string): boolean {
   const normalized = normalize(value)
+  const correctAnswer = normalize(blank.correctAnswer)
+  // Some book exercises ("put in a/an or the where necessary") expect no
+  // word at all — correctAnswer is '' and the blank is only right if left empty.
+  if (!correctAnswer) return !normalized
   if (!normalized) return false
-  if (normalized === normalize(blank.correctAnswer)) return true
+  if (normalized === correctAnswer) return true
   return blank.acceptedAlternatives.some(alt => normalize(alt) === normalized)
 }
 
 export function getBlankStatus(blank: ExerciseBlank, value: string, checked: boolean): BlankStatus {
   if (!checked) return 'idle'
-  if (!value.trim()) return 'empty'
+  if (!value.trim() && blank.correctAnswer.trim()) return 'empty'
   return isBlankCorrect(blank, value) ? 'correct' : 'wrong'
 }
 
