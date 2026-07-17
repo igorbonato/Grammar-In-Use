@@ -137,6 +137,9 @@ export const modules: Module[] = [
       { id: 'unit-76', title: 'the 4 (the giraffe / the telephone / the old etc.)', shortTitle: 'Unit 76' },
       { id: 'unit-77', title: 'Names with and without the 1', shortTitle: 'Unit 77' },
       { id: 'unit-78', title: 'Names with and without the 2', shortTitle: 'Unit 78' },
+      { id: 'unit-79', title: 'Singular and plural', shortTitle: 'Unit 79' },
+      { id: 'unit-80', title: 'Noun + noun (a bus driver / a headache)', shortTitle: 'Unit 80' },
+      { id: 'unit-81', title: '-\'s (your sister\'s name) and of ... (the name of the book)', shortTitle: 'Unit 81' },
     ],
   },
 ]
