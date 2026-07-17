@@ -132,6 +132,9 @@ export const modules: Module[] = [
       { id: 'unit-71', title: 'Countable nouns with a/an and some', shortTitle: 'Unit 71' },
       { id: 'unit-72', title: 'a/an and the', shortTitle: 'Unit 72' },
       { id: 'unit-73', title: 'the 1', shortTitle: 'Unit 73' },
+      { id: 'unit-74', title: 'the 2 (school / the school etc.)', shortTitle: 'Unit 74' },
+      { id: 'unit-75', title: 'the 3 (children / the children)', shortTitle: 'Unit 75' },
+      { id: 'unit-76', title: 'the 4 (the giraffe / the telephone / the old etc.)', shortTitle: 'Unit 76' },
     ],
   },
 ]
