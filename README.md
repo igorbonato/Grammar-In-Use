@@ -56,7 +56,8 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
 - [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo
   - [x] "Present and past" (units 1-6) — `0003_seed_present_and_past.sql`
   - [x] "Present perfect and past" (units 7-18) — `0004_seed_present_perfect_and_past.sql`
-  - [ ] Demais módulos (Future, Modals, Passive, etc.) ainda pendentes
+  - [x] "Future" (units 19-25) — `0005_seed_future.sql`
+  - [ ] Demais módulos (Modals, Passive, etc.) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 

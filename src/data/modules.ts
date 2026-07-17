@@ -35,9 +35,13 @@ export const modules: Module[] = [
     id: 'future',
     title: 'Future',
     units: [
-      { id: 'unit-19', title: "Future: I'm going to (do)", shortTitle: 'Unit 19' },
-      { id: 'unit-20', title: 'Future: will/shall 1', shortTitle: 'Unit 20' },
-      { id: 'unit-21', title: 'Future: will/shall 2', shortTitle: 'Unit 21' },
+      { id: 'unit-19', title: 'Present tenses for the future (I am doing / I do)', shortTitle: 'Unit 19' },
+      { id: 'unit-20', title: "I'm going to (do)", shortTitle: 'Unit 20' },
+      { id: 'unit-21', title: 'will and shall 1', shortTitle: 'Unit 21' },
+      { id: 'unit-22', title: 'will and shall 2', shortTitle: 'Unit 22' },
+      { id: 'unit-23', title: "I will and I'm going to", shortTitle: 'Unit 23' },
+      { id: 'unit-24', title: 'will be doing and will have done', shortTitle: 'Unit 24' },
+      { id: 'unit-25', title: "when I do and when I've done. if and when", shortTitle: 'Unit 25' },
     ],
   },
   {
