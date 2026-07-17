@@ -362,14 +362,14 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-78' wher
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'Many tourists in London visit {0}.', "St Paul's Cathedral / the St Paul's Cathedral"),
+  (1, 'Many tourists in London visit {0}.', 'St Paul''s Cathedral / the St Paul''s Cathedral'),
   (2, 'The biggest park in New York is {0}.', 'Central Park / The Central Park'),
   (3, 'I''d like to go to China and see {0}.', 'Great Wall / the Great Wall'),
   (4, '{0} is situated about 12 kilometres from the city centre.', 'Dublin Airport / The Dublin Airport'),
   (5, '''Which cinema are we going to this evening?'' ''{0}.''', 'Classic / The Classic'),
   (6, 'Jack is a student at {0}.', 'Liverpool University / the Liverpool University'),
   (7, 'You should go to {0}. It''s very interesting.', 'National Museum / the National Museum'),
-  (8, 'If you''re looking for a department store, I would recommend {0}.', "Harrison's / the Harrison's"),
+  (8, 'If you''re looking for a department store, I would recommend {0}.', 'Harrison''s / the Harrison''s'),
   (9, 'Andy is a flight attendant. He works for {0}.', 'Cathay Pacific / the Cathay Pacific'),
   (10, '''Which newspaper do you want?'' ''{0}.''', 'Morning News / The Morning News'),
   (11, 'We went to Italy and saw {0} of Pisa.', 'Leaning Tower / the Leaning Tower'),
