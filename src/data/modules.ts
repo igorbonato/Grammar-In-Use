@@ -123,4 +123,12 @@ export const modules: Module[] = [
       { id: 'unit-68', title: '-ing clauses (He hurt his knee playing football.)', shortTitle: 'Unit 68' },
     ],
   },
+  {
+    id: 'articles-and-nouns',
+    title: 'Articles and nouns',
+    units: [
+      { id: 'unit-69', title: 'Countable and uncountable 1', shortTitle: 'Unit 69' },
+      { id: 'unit-70', title: 'Countable and uncountable 2', shortTitle: 'Unit 70' },
+    ],
+  },
 ]
