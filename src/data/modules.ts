@@ -72,4 +72,15 @@ export const modules: Module[] = [
       { id: 'unit-41', title: 'wish', shortTitle: 'Unit 41' },
     ],
   },
+  {
+    id: 'passive',
+    title: 'Passive',
+    units: [
+      { id: 'unit-42', title: 'Passive 1 (is done / was done)', shortTitle: 'Unit 42' },
+      { id: 'unit-43', title: 'Passive 2 (be done / been done / being done)', shortTitle: 'Unit 43' },
+      { id: 'unit-44', title: 'Passive 3', shortTitle: 'Unit 44' },
+      { id: 'unit-45', title: 'he is supposed to ...', shortTitle: 'Unit 45' },
+      { id: 'unit-46', title: 'have something done', shortTitle: 'Unit 46' },
+    ],
+  },
 ]
