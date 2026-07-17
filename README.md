@@ -57,7 +57,9 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
   - [x] "Present and past" (units 1-6) — `0003_seed_present_and_past.sql`
   - [x] "Present perfect and past" (units 7-18) — `0004_seed_present_perfect_and_past.sql`
   - [x] "Future" (units 19-25) — `0005_seed_future.sql`
-  - [ ] Demais módulos (Modals, Passive, etc.) ainda pendentes
+  - [x] "Modals" (units 26-37) — `0006_seed_modals.sql`
+  - [ ] "Conditionals and wish" (units 38-41, do mesmo PDF de Modals) — pendente
+  - [ ] Demais módulos (Passive, etc.) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
