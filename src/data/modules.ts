@@ -142,4 +142,12 @@ export const modules: Module[] = [
       { id: 'unit-81', title: '-\'s (your sister\'s name) and of ... (the name of the book)', shortTitle: 'Unit 81' },
     ],
   },
+  {
+    id: 'pronouns-and-determiners',
+    title: 'Pronouns and determiners',
+    units: [
+      { id: 'unit-82', title: 'myself/yourself/themselves etc.', shortTitle: 'Unit 82' },
+      { id: 'unit-83', title: 'on my own / by myself', shortTitle: 'Unit 83' },
+    ],
+  },
 ]
