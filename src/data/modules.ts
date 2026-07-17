@@ -83,4 +83,12 @@ export const modules: Module[] = [
       { id: 'unit-46', title: 'have something done', shortTitle: 'Unit 46' },
     ],
   },
+  {
+    id: 'reported-speech',
+    title: 'Reported speech',
+    units: [
+      { id: 'unit-47', title: 'Reported speech 1 (he said that ...)', shortTitle: 'Unit 47' },
+      { id: 'unit-48', title: 'Reported speech 2', shortTitle: 'Unit 48' },
+    ],
+  },
 ]

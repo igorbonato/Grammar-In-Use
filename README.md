@@ -60,7 +60,8 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
   - [x] "Modals" (units 26-37) — `0006_seed_modals.sql`
   - [x] "Conditionals and wish" (units 38-41, do mesmo PDF de Modals) — `0007_seed_conditionals_and_wish.sql`
   - [x] "Passive" (units 42-46) — `0008_seed_passive.sql`
-  - [ ] Demais módulos (-ing and to ..., Questions and auxiliary verbs, Reported speech, etc.) ainda pendentes
+  - [x] "Reported speech" (units 47-48) — `0009_seed_reported_speech.sql`
+  - [ ] Demais módulos (-ing and to ..., Questions and auxiliary verbs, Relative clauses, etc.) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
