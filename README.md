@@ -65,7 +65,13 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
   - [x] "-ing and to ..." (units 53-68, 1 módulo só, semeado em fatias)
     - [x] Units 53-58 (verb + -ing/to) — `0011_seed_ing_and_to_slice1.sql`
     - [x] Units 59-68 (prefer, used to, preposition + -ing, etc.) — `0012_seed_ing_and_to_slice2.sql`
-  - [ ] Demais módulos (Relative clauses, Conjunctions and prepositions, etc.) ainda pendentes
+  - [x] "Articles and nouns" (units 69-81, 1 módulo só, semeado em fatias)
+    - [x] Units 69-70 (countable/uncountable) — `0013_seed_articles_and_nouns_slice1.sql`
+    - [x] Units 71-73 (a/an and some, a/an and the, the 1) — `0014_seed_articles_and_nouns_slice2.sql`
+    - [x] Units 74-76 (the 2/3/4) — `0015_seed_articles_and_nouns_slice3.sql`
+    - [x] Units 77-78 (names with/without the) — `0016_seed_articles_and_nouns_slice4.sql`
+    - [x] Units 79-81 (singular/plural, noun+noun, -'s and of...) — `0017_seed_articles_and_nouns_slice5.sql`
+  - [ ] Demais módulos (Pronouns and determiners, Relative clauses, Adjectives and adverbs, Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
