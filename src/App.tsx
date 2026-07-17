@@ -1,16 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Sidebar from './components/layout/Sidebar'
 import TheoryPanel from './components/theory/TheoryPanel'
 import ExercisesPanel from './components/exercises/ExercisesPanel'
 import { modules } from './data/modules'
 import { findModuleAndUnit } from './lib/curriculum'
+import { useAuthStore } from './store/useAuthStore'
 import type { Unit } from './types/grammar'
 
 export default function App() {
   const { moduleId, unitId } = useParams()
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const initializeAuth = useAuthStore(state => state.initialize)
+
+  useEffect(() => {
+    initializeAuth()
+  }, [initializeAuth])
 
   const found = findModuleAndUnit(modules, moduleId, unitId)
   const activeModule = found?.module ?? modules[0]

@@ -49,13 +49,26 @@ export type TheoryContent = {
   spellingNotes: SpellingNote[]
 }
 
-export type Exercise = {
-  id: number
-  instruction?: string
-  prompt: string
-  prefix?: string
-  suffix?: string
-  blank: string
-  answer: string
-  hint?: string
+export type ExerciseBlank = {
+  id: string
+  blankIndex: number
+  correctAnswer: string
+  acceptedAlternatives: string[]
+}
+
+export type ExerciseSentence = {
+  id: string
+  sentenceNumber: number
+  // indexed placeholders, e.g. 'The sun {0} in the west.'
+  template: string
+  hint: string | null
+  blanks: ExerciseBlank[]
+}
+
+export type ExerciseSet = {
+  id: string
+  kind: 'main' | 'additional'
+  title: string | null
+  instruction: string | null
+  sentences: ExerciseSentence[]
 }

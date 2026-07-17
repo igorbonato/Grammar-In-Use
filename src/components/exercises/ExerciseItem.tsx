@@ -1,19 +1,33 @@
-import type { Exercise } from '../../types/grammar'
-import type { ExerciseStatus } from '../../hooks/useExerciseValidation'
+import type { ExerciseSentence } from '../../types/grammar'
+import { parseTemplate } from '../../lib/exerciseTemplate'
+import { getBlankStatus, isBlankCorrect, type BlankStatus } from '../../lib/exerciseGrading'
 import InlineInput from './InlineInput'
 import HintToggle from './HintToggle'
 
 type Props = {
-  exercise: Exercise
+  sentence: ExerciseSentence
   index: number
-  status: ExerciseStatus
-  value: string
+  answers: Record<string, string>
+  checked: boolean
   hintVisible: boolean
-  onChange: (id: number, value: string) => void
-  onShowHint: (id: number) => void
+  onChangeBlank: (blankId: string, value: string) => void
+  onShowHint: () => void
 }
 
-export default function ExerciseItem({ exercise, index, status, value, hintVisible, onChange, onShowHint }: Props) {
+function worstStatus(statuses: BlankStatus[]): BlankStatus {
+  if (statuses.includes('wrong')) return 'wrong'
+  if (statuses.includes('empty')) return 'empty'
+  if (statuses.length > 0 && statuses.every(s => s === 'correct')) return 'correct'
+  return 'idle'
+}
+
+export default function ExerciseItem({ sentence, index, answers, checked, hintVisible, onChangeBlank, onShowHint }: Props) {
+  const segments = parseTemplate(sentence.template)
+  const blankByIndex = new Map(sentence.blanks.map(blank => [blank.blankIndex, blank]))
+  const statuses = sentence.blanks.map(blank => getBlankStatus(blank, answers[blank.id] ?? '', checked))
+  const status = worstStatus(statuses)
+  const wrongBlanks = checked ? sentence.blanks.filter(blank => !isBlankCorrect(blank, answers[blank.id] ?? '')) : []
+
   return (
     <div
       className="bg-white rounded-xl border transition-all duration-200"
@@ -41,22 +55,38 @@ export default function ExerciseItem({ exercise, index, status, value, hintVisib
 
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-1.5 text-[15px] text-gray-700 leading-relaxed">
-              {exercise.prefix && <span>{exercise.prefix}</span>}
-              <InlineInput id={exercise.id} value={value} status={status} onChange={onChange} />
-              {exercise.suffix && <span>{exercise.suffix}</span>}
+              {segments.map((segment, i) => {
+                if (segment.type === 'text') {
+                  return <span key={i}>{segment.value}</span>
+                }
+                const blank = blankByIndex.get(segment.blankIndex)
+                if (!blank) return null
+                return (
+                  <InlineInput
+                    key={blank.id}
+                    id={blank.id}
+                    value={answers[blank.id] ?? ''}
+                    status={getBlankStatus(blank, answers[blank.id] ?? '', checked)}
+                    label={sentence.blanks.length > 1
+                      ? `Answer ${index + 1}.${blank.blankIndex + 1}`
+                      : `Answer ${index + 1}`}
+                    onChange={onChangeBlank}
+                  />
+                )
+              })}
             </div>
 
-            {status === 'wrong' && (
+            {wrongBlanks.length > 0 && (
               <div className="mt-2 flex items-center gap-2">
                 <span className="text-[12px] text-gray-400">Correct answer:</span>
                 <span className="text-[13px] font-semibold text-green-700 bg-green-50 px-2 py-0.5 rounded-md border border-green-100">
-                  {exercise.answer}
+                  {sentence.blanks.map(blank => blank.correctAnswer).join(' / ')}
                 </span>
               </div>
             )}
 
-            {exercise.hint && (
-              <HintToggle hint={exercise.hint} visible={hintVisible} onShow={() => onShowHint(exercise.id)} />
+            {sentence.hint && (
+              <HintToggle hint={sentence.hint} visible={hintVisible} onShow={onShowHint} />
             )}
           </div>
         </div>

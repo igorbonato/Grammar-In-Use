@@ -1,5 +1,5 @@
 import type { Unit } from '../../types/grammar'
-import { useUnitContent } from '../../hooks/useUnitContent'
+import { useUnitTheory } from '../../hooks/useUnitTheory'
 import StructureTable from './StructureTable'
 import GrammarRuleBox from './GrammarRuleBox'
 import SpellingNotes from './SpellingNotes'
@@ -11,7 +11,7 @@ type Props = {
 }
 
 export default function TheoryPanel({ unit, moduleTitle }: Props) {
-  const content = useUnitContent(unit.id)
+  const { data: content, isLoading } = useUnitTheory(unit.id)
 
   return (
     <div className="flex-1 flex flex-col overflow-hidden border-r border-gray-200/80">
@@ -24,25 +24,41 @@ export default function TheoryPanel({ unit, moduleTitle }: Props) {
           <span className="text-blue-200/70 text-xs font-medium">{unit.shortTitle}</span>
         </div>
         <h1 className="text-white font-bold text-2xl leading-tight">
-          {unit.shortTitle}: {content.title}
+          {unit.shortTitle}{content ? `: ${content.title}` : ''}
         </h1>
-        <p className="text-blue-200/80 text-base mt-1 font-medium">({content.subtitle})</p>
+        {content?.subtitle && (
+          <p className="text-blue-200/80 text-base mt-1 font-medium">({content.subtitle})</p>
+        )}
       </div>
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto bg-white">
         <div className="px-8 py-6 max-w-[640px]">
-          <p className="text-gray-600 text-[15px] leading-relaxed mb-6">{content.intro}</p>
+          {isLoading && (
+            <p className="text-gray-400 text-sm">Loading theory…</p>
+          )}
 
-          <StructureTable structure={content.structure} />
+          {!isLoading && !content && (
+            <p className="text-gray-400 text-sm">
+              This unit's content is being prepared. Select Unit 1 to see the full interactive lesson.
+            </p>
+          )}
 
-          {content.sections.map(section => (
-            <GrammarRuleBox key={section.id} section={section} />
-          ))}
+          {content && (
+            <>
+              <p className="text-gray-600 text-[15px] leading-relaxed mb-6">{content.intro}</p>
 
-          <SpellingNotes notes={content.spellingNotes} />
+              <StructureTable structure={content.structure} />
 
-          <IllustrationPlaceholder />
+              {content.sections.map(section => (
+                <GrammarRuleBox key={section.id} section={section} />
+              ))}
+
+              <SpellingNotes notes={content.spellingNotes} />
+
+              <IllustrationPlaceholder />
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -1,13 +1,14 @@
-import type { ExerciseStatus } from '../../hooks/useExerciseValidation'
+import type { BlankStatus } from '../../lib/exerciseGrading'
 
 type Props = {
-  id: number
+  id: string
   value: string
-  status: ExerciseStatus
-  onChange: (id: number, value: string) => void
+  status: BlankStatus
+  label: string
+  onChange: (id: string, value: string) => void
 }
 
-export default function InlineInput({ id, value, status, onChange }: Props) {
+export default function InlineInput({ id, value, status, label, onChange }: Props) {
   return (
     <span className="relative inline-flex items-center">
       <input
@@ -15,7 +16,7 @@ export default function InlineInput({ id, value, status, onChange }: Props) {
         value={value}
         onChange={e => onChange(id, e.target.value)}
         placeholder="type here..."
-        aria-label={`Answer for exercise ${id}`}
+        aria-label={label}
         aria-invalid={status === 'wrong'}
         className="px-2.5 py-1 rounded-lg border text-[14px] font-medium transition-all"
         style={{
