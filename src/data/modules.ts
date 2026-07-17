@@ -135,6 +135,8 @@ export const modules: Module[] = [
       { id: 'unit-74', title: 'the 2 (school / the school etc.)', shortTitle: 'Unit 74' },
       { id: 'unit-75', title: 'the 3 (children / the children)', shortTitle: 'Unit 75' },
       { id: 'unit-76', title: 'the 4 (the giraffe / the telephone / the old etc.)', shortTitle: 'Unit 76' },
+      { id: 'unit-77', title: 'Names with and without the 1', shortTitle: 'Unit 77' },
+      { id: 'unit-78', title: 'Names with and without the 2', shortTitle: 'Unit 78' },
     ],
   },
 ]
