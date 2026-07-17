@@ -25,8 +25,11 @@ pdf/              Material bruto original (PDFs do livro), usado como fonte para
                   ingestão de conteúdo. Não versionado no Git — ver abaixo.
 
 supabase/
-  migrations/     Migrations do schema do banco (Supabase CLI)
-  seed/           Scripts SQL de seed por unit (rodar manualmente no SQL Editor por enquanto)
+  migrations/     Migrations do schema do banco + seeds de conteúdo por módulo. O projeto
+                  Supabase está linkado ao repositório no GitHub, então tudo aqui é aplicado
+                  automaticamente a cada push na main — não precisa rodar nada manualmente.
+  seed/           unit-1.sql (seed de referência do Marco 1, ainda rodado manualmente no SQL
+                  Editor). Novo conteúdo de módulo vai direto em migrations/, não aqui.
 tools/ingestion/  Scripts de extração de conteúdo dos PDFs (a criar)
 ```
 
@@ -50,6 +53,6 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
 - [x] **Marco 1** — Refatoração do front-end em componentes modulares
 - [x] **Marco 2** — Modelagem do banco de dados no Supabase (`supabase/migrations/0001_init.sql`)
 - [x] **Marco 3** — Integração de estado (Zustand + TanStack Query), cliente Supabase e auth anônima
-- [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo
+- [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo (`supabase/migrations/0003_seed_present_and_past.sql`: units 2-6 de "Present and past" + additional exercise das units 1-6; demais módulos ainda pendentes)
 
 Ver `CLAUDE.md` para as regras de negócio e diretrizes de arquitetura completas do projeto.
