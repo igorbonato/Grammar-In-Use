@@ -58,4 +58,29 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
   - [x] "Present perfect and past" (units 7-18) — `0004_seed_present_perfect_and_past.sql`
   - [ ] Demais módulos (Future, Modals, Passive, etc.) ainda pendentes
 
+## Roadmap Futuro: Aba de Fonética
+
+> Ideia registrada em 2026-07-17, para ser desenvolvida depois que a gramática
+> estiver toda populada. Nada abaixo foi implementado ainda — nenhum código ou
+> JSON foi escrito, apenas a especificação.
+
+### Especificação: Aba de Fonética (Future Scope)
+
+* **Objetivo:** Ensinar fonética através de palavras e frases.
+* **Áudio:** Sem arquivos MP3. Uso exclusivo da Web Speech API do JavaScript
+  (`window.speechSynthesis`) para ler frases com sotaque americano ('en-US').
+* **API de Dados:** Consumo da 'Free Dictionary API' (https://api.dictionaryapi.dev/).
+* **Estrutura de Dados Desejada:** Um modelo JSON contendo a palavra, a
+  transcrição IPA, uma frase de exemplo, os fonemas-chave e um campo para
+  "nota explicativa" (focada em dificuldades de falantes de português) que
+  será customizada manualmente.
+* **Tarefas pendentes para o momento do desenvolvimento:**
+  1. Criar exemplo de estrutura JSON para 3 palavras de dificuldades
+     diferentes (ex: 'empty', 'thought', 'schedule').
+  2. Criar protótipo funcional em HTML/JS testando a Web Speech API.
+  3. Estruturar o código para permitir a injeção da "nota explicativa"
+     personalizada após o carregamento da API.
+  4. Levantar e documentar as limitações da Web Speech API para fins
+     educacionais de pronúncia.
+
 Ver `CLAUDE.md` para as regras de negócio e diretrizes de arquitetura completas do projeto.
