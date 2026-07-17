@@ -53,6 +53,9 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
 - [x] **Marco 1** — Refatoração do front-end em componentes modulares
 - [x] **Marco 2** — Modelagem do banco de dados no Supabase (`supabase/migrations/0001_init.sql`)
 - [x] **Marco 3** — Integração de estado (Zustand + TanStack Query), cliente Supabase e auth anônima
-- [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo (`supabase/migrations/0003_seed_present_and_past.sql`: units 2-6 de "Present and past" + additional exercise das units 1-6; demais módulos ainda pendentes)
+- [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo
+  - [x] "Present and past" (units 1-6) — `0003_seed_present_and_past.sql`
+  - [x] "Present perfect and past" (units 7-18) — `0004_seed_present_perfect_and_past.sql`
+  - [ ] Demais módulos (Future, Modals, Passive, etc.) ainda pendentes
 
 Ver `CLAUDE.md` para as regras de negócio e diretrizes de arquitetura completas do projeto.

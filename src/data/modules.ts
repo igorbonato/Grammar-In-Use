@@ -19,7 +19,16 @@ export const modules: Module[] = [
     units: [
       { id: 'unit-7', title: 'Present perfect 1 (I have done)', shortTitle: 'Unit 7' },
       { id: 'unit-8', title: 'Present perfect 2 (I have done)', shortTitle: 'Unit 8' },
-      { id: 'unit-9', title: 'Present perfect continuous', shortTitle: 'Unit 9' },
+      { id: 'unit-9', title: 'Present perfect continuous (I have been doing)', shortTitle: 'Unit 9' },
+      { id: 'unit-10', title: 'Present perfect continuous and simple', shortTitle: 'Unit 10' },
+      { id: 'unit-11', title: 'How long have you (been) ...?', shortTitle: 'Unit 11' },
+      { id: 'unit-12', title: 'for and since. when...? and how long...?', shortTitle: 'Unit 12' },
+      { id: 'unit-13', title: 'Present perfect and past 1 (I have done and I did)', shortTitle: 'Unit 13' },
+      { id: 'unit-14', title: 'Present perfect and past 2 (I have done and I did)', shortTitle: 'Unit 14' },
+      { id: 'unit-15', title: 'Past perfect (I had done)', shortTitle: 'Unit 15' },
+      { id: 'unit-16', title: 'Past perfect continuous (I had been doing)', shortTitle: 'Unit 16' },
+      { id: 'unit-17', title: 'have and have got', shortTitle: 'Unit 17' },
+      { id: 'unit-18', title: 'used to (do)', shortTitle: 'Unit 18' },
     ],
   },
   {
