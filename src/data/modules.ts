@@ -62,4 +62,14 @@ export const modules: Module[] = [
       { id: 'unit-37', title: 'can/could/would you ... ? etc.', shortTitle: 'Unit 37' },
     ],
   },
+  {
+    id: 'conditionals-and-wish',
+    title: 'Conditionals and wish',
+    units: [
+      { id: 'unit-38', title: 'if I do ... and if I did ...', shortTitle: 'Unit 38' },
+      { id: 'unit-39', title: 'if I knew ... I wish I knew ...', shortTitle: 'Unit 39' },
+      { id: 'unit-40', title: 'if I had known ... I wish I had known ...', shortTitle: 'Unit 40' },
+      { id: 'unit-41', title: 'wish', shortTitle: 'Unit 41' },
+    ],
+  },
 ]
