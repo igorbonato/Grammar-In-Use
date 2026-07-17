@@ -91,4 +91,14 @@ export const modules: Module[] = [
       { id: 'unit-48', title: 'Reported speech 2', shortTitle: 'Unit 48' },
     ],
   },
+  {
+    id: 'questions-and-auxiliary-verbs',
+    title: 'Questions and auxiliary verbs',
+    units: [
+      { id: 'unit-49', title: 'Questions 1', shortTitle: 'Unit 49' },
+      { id: 'unit-50', title: 'Questions 2 (do you know where ... ? / he asked me where ...)', shortTitle: 'Unit 50' },
+      { id: 'unit-51', title: 'I think so / I hope so etc.', shortTitle: 'Unit 51' },
+      { id: 'unit-52', title: "Question tags (do you? isn't it? etc.)", shortTitle: 'Unit 52' },
+    ],
+  },
 ]
