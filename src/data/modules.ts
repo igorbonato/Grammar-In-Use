@@ -129,6 +129,9 @@ export const modules: Module[] = [
     units: [
       { id: 'unit-69', title: 'Countable and uncountable 1', shortTitle: 'Unit 69' },
       { id: 'unit-70', title: 'Countable and uncountable 2', shortTitle: 'Unit 70' },
+      { id: 'unit-71', title: 'Countable nouns with a/an and some', shortTitle: 'Unit 71' },
+      { id: 'unit-72', title: 'a/an and the', shortTitle: 'Unit 72' },
+      { id: 'unit-73', title: 'the 1', shortTitle: 'Unit 73' },
     ],
   },
 ]
