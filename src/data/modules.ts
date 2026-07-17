@@ -101,4 +101,16 @@ export const modules: Module[] = [
       { id: 'unit-52', title: "Question tags (do you? isn't it? etc.)", shortTitle: 'Unit 52' },
     ],
   },
+  {
+    id: 'ing-and-to',
+    title: '-ing and to ...',
+    units: [
+      { id: 'unit-53', title: 'Verb + -ing (enjoy doing / stop doing etc.)', shortTitle: 'Unit 53' },
+      { id: 'unit-54', title: 'Verb + to ... (decide to ... / forget to ... etc.)', shortTitle: 'Unit 54' },
+      { id: 'unit-55', title: 'Verb (+ object) + to ... (I want you to ...)', shortTitle: 'Unit 55' },
+      { id: 'unit-56', title: 'Verb + -ing or to ... 1 (remember, regret etc.)', shortTitle: 'Unit 56' },
+      { id: 'unit-57', title: 'Verb + -ing or to ... 2 (try, need, help)', shortTitle: 'Unit 57' },
+      { id: 'unit-58', title: 'Verb + -ing or to ... 3 (like / would like etc.)', shortTitle: 'Unit 58' },
+    ],
+  },
 ]

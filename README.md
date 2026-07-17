@@ -62,7 +62,10 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
   - [x] "Passive" (units 42-46) — `0008_seed_passive.sql`
   - [x] "Reported speech" (units 47-48) — `0009_seed_reported_speech.sql`
   - [x] "Questions and auxiliary verbs" (units 49-52) — `0010_seed_questions_and_auxiliary_verbs.sql`
-  - [ ] Demais módulos (-ing and to ..., Relative clauses, Conjunctions and prepositions, etc.) ainda pendentes
+  - [ ] "-ing and to ..." (units 53-68, 1 módulo só, semeado em fatias)
+    - [x] Units 53-58 (verb + -ing/to) — `0011_seed_ing_and_to_slice1.sql`
+    - [ ] Units 59-68 ainda pendentes
+  - [ ] Demais módulos (Relative clauses, Conjunctions and prepositions, etc.) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
