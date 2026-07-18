@@ -187,6 +187,8 @@ export const modules: Module[] = [
       { id: 'unit-108', title: 'Superlative (the longest / the most enjoyable etc.)', shortTitle: 'Unit 108' },
       { id: 'unit-109', title: 'Word order 1: verb + object; place and time', shortTitle: 'Unit 109' },
       { id: 'unit-110', title: 'Word order 2: adverbs with the verb', shortTitle: 'Unit 110' },
+      { id: 'unit-111', title: 'still any more yet already', shortTitle: 'Unit 111' },
+      { id: 'unit-112', title: 'even', shortTitle: 'Unit 112' },
     ],
   },
 ]
