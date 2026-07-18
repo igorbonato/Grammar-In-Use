@@ -134,11 +134,11 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-116' whe
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'As I was tired, I went to bed early. What does as mean here?', '(because / at the same time as)'),
-  (2, 'Unfortunately, as I was parking the car, I hit the car behind me. What does as mean here?', '(because / at the same time as)'),
-  (3, 'As we climbed the hill, we got more and more tired. What does as mean here?', '(because / at the same time as)'),
-  (4, 'We decided to go out to eat as we had no food at home. What does as mean here?', '(because / at the same time as)'),
-  (5, 'As we don''t use the car very often, we''ve decided to sell it. What does as mean here?', '(because / at the same time as)')
+  (1, 'As I was tired, I went to bed early. What does as mean here? {0}', '(because / at the same time as)'),
+  (2, 'Unfortunately, as I was parking the car, I hit the car behind me. What does as mean here? {0}', '(because / at the same time as)'),
+  (3, 'As we climbed the hill, we got more and more tired. What does as mean here? {0}', '(because / at the same time as)'),
+  (4, 'We decided to go out to eat as we had no food at home. What does as mean here? {0}', '(because / at the same time as)'),
+  (5, 'As we don''t use the car very often, we''ve decided to sell it. What does as mean here? {0}', '(because / at the same time as)')
 ) as v(n, template, hint)
 where es.title = '116.3';
 

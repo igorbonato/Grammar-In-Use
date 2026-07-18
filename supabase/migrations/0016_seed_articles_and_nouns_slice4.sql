@@ -174,20 +174,20 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-77' wher
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'Where is Argentina?', null),
-  (2, 'Which is the longest river in Africa?', null),
-  (3, 'Of which country is Stockholm the capital?', null),
-  (4, 'Of which country is Washington the capital?', null),
-  (5, 'What is the name of the mountain range in the west of North America?', null),
-  (6, 'What is the name of the sea between Africa and Europe?', null),
-  (7, 'Which is the smallest continent in the world?', null),
-  (8, 'What is the name of the ocean between North America and Asia?', null),
-  (9, 'What is the name of the ocean between Africa and Australia?', null),
-  (10, 'Which river flows through London?', null),
-  (11, 'Which river flows through Vienna, Budapest and Belgrade?', null),
-  (12, 'Of which country is Bangkok the capital?', null),
-  (13, 'What joins the Atlantic and Pacific Oceans?', null),
-  (14, 'Which is the longest river in South America?', null)
+  (1, 'Where is Argentina? {0}', null),
+  (2, 'Which is the longest river in Africa? {0}', null),
+  (3, 'Of which country is Stockholm the capital? {0}', null),
+  (4, 'Of which country is Washington the capital? {0}', null),
+  (5, 'What is the name of the mountain range in the west of North America? {0}', null),
+  (6, 'What is the name of the sea between Africa and Europe? {0}', null),
+  (7, 'Which is the smallest continent in the world? {0}', null),
+  (8, 'What is the name of the ocean between North America and Asia? {0}', null),
+  (9, 'What is the name of the ocean between Africa and Australia? {0}', null),
+  (10, 'Which river flows through London? {0}', null),
+  (11, 'Which river flows through Vienna, Budapest and Belgrade? {0}', null),
+  (12, 'Of which country is Bangkok the capital? {0}', null),
+  (13, 'What joins the Atlantic and Pacific Oceans? {0}', null),
+  (14, 'Which is the longest river in South America? {0}', null)
 ) as v(n, template, hint)
 where es.title = '77.3';
 
@@ -302,13 +302,13 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-78' wher
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'Is there a supermarket near here?', 'map'),
-  (2, 'Is there a hotel near here?', 'map'),
-  (3, 'Is there a church near here?', 'map'),
-  (4, 'Is there a museum near here?', 'map'),
-  (5, 'Is there a bookshop near here?', 'map'),
-  (6, 'Is there a restaurant near here?', 'map'),
-  (7, 'Is there a park near here?', 'map')
+  (1, 'Is there a supermarket near here? {0}', 'map'),
+  (2, 'Is there a hotel near here? {0}', 'map'),
+  (3, 'Is there a church near here? {0}', 'map'),
+  (4, 'Is there a museum near here? {0}', 'map'),
+  (5, 'Is there a bookshop near here? {0}', 'map'),
+  (6, 'Is there a restaurant near here? {0}', 'map'),
+  (7, 'Is there a park near here? {0}', 'map')
 ) as v(n, template, hint)
 where es.title = '78.1';
 

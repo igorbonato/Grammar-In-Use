@@ -445,16 +445,16 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-76' wher
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'Which animal can run the fastest? (elephant, cheetah, tiger, kangaroo, rabbit, giraffe)', null),
-  (2, 'Which of these animals is found in Australia? (elephant, cheetah, tiger, kangaroo, rabbit, giraffe)', null),
-  (3, 'Which of these birds has a long neck? (penguin, owl, eagle, pigeon, swan, parrot)', null),
-  (4, 'Which of these birds cannot fly? (penguin, owl, eagle, pigeon, swan, parrot)', null),
-  (5, 'Which bird flies at night? (penguin, owl, eagle, pigeon, swan, parrot)', null),
-  (6, 'Which of these inventions is the oldest? (wheel, laser, telescope)', null),
-  (7, 'Which one is the most recent? (wheel, laser, telescope)', null),
-  (8, 'Which one was especially important for astronomy? (wheel, laser, telescope)', null),
-  (9, 'What is the currency of India? (rupee, dollar, euro, rouble, peso, yen)', null),
-  (10, 'What is the currency of Canada? (rupee, dollar, euro, rouble, peso, yen)', null)
+  (1, 'Which animal can run the fastest? (elephant, cheetah, tiger, kangaroo, rabbit, giraffe) {0}', null),
+  (2, 'Which of these animals is found in Australia? (elephant, cheetah, tiger, kangaroo, rabbit, giraffe) {0}', null),
+  (3, 'Which of these birds has a long neck? (penguin, owl, eagle, pigeon, swan, parrot) {0}', null),
+  (4, 'Which of these birds cannot fly? (penguin, owl, eagle, pigeon, swan, parrot) {0}', null),
+  (5, 'Which bird flies at night? (penguin, owl, eagle, pigeon, swan, parrot) {0}', null),
+  (6, 'Which of these inventions is the oldest? (wheel, laser, telescope) {0}', null),
+  (7, 'Which one is the most recent? (wheel, laser, telescope) {0}', null),
+  (8, 'Which one was especially important for astronomy? (wheel, laser, telescope) {0}', null),
+  (9, 'What is the currency of India? (rupee, dollar, euro, rouble, peso, yen) {0}', null),
+  (10, 'What is the currency of Canada? (rupee, dollar, euro, rouble, peso, yen) {0}', null)
 ) as v(n, template, hint)
 where es.title = '76.1';
 

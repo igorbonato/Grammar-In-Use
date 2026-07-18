@@ -201,37 +201,37 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-84' wher
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'It''s a long way from my house to the nearest shop.', 'OK — no change needed'),
+  (1, 'It''s a long way from my house to the nearest shop. {0}', 'OK — no change needed'),
   (2, 'After the lecture {0} to ask questions.', null),
   (3, 'Why was she so unfriendly? {0}', null),
-  (4, 'I like where I live, but it would be nicer to live by the sea.', 'OK — no change needed'),
-  (5, 'How long is it since you last went to the theatre?', 'OK — no change needed'),
+  (4, 'I like where I live, but it would be nicer to live by the sea. {0}', 'OK — no change needed'),
+  (5, 'How long is it since you last went to the theatre? {0}', 'OK — no change needed'),
   (6, '{0} here, but not many come now.', null),
   (7, 'My phone won''t work here. {0}', null),
-  (8, 'It was Ken''s birthday yesterday. We had a party.', 'OK — no change needed'),
+  (8, 'It was Ken''s birthday yesterday. We had a party. {0}', 'OK — no change needed'),
   (9, 'We won''t have any problem parking the car. {0} somewhere.', null),
-  (10, 'I''m sorry about what happened. It was my fault.', 'OK — no change needed'),
+  (10, 'I''m sorry about what happened. It was my fault. {0}', 'OK — no change needed'),
   (11, 'I was told that {0} at the station, but it wasn''t anybody.', null)
 ) as v(n, template, hint)
 where es.title = '84.4';
 
-insert into exercise_blanks (sentence_id, blank_index, correct_answer)
-select sen.id, 0, v.correct_answer
+insert into exercise_blanks (sentence_id, blank_index, correct_answer, accepted_alternatives)
+select sen.id, 0, v.correct_answer, v.accepted_alternatives
 from exercise_sentences sen
 join exercise_sets es on es.id = sen.exercise_set_id and es.title = '84.4'
 join (values
-  (1, 'It''s a long way from my house to the nearest shop.'),
-  (2, 'there will be an opportunity'),
-  (3, 'There must have been a reason.'),
-  (4, 'I like where I live, but it would be nicer to live by the sea.'),
-  (5, 'How long is it since you last went to the theatre?'),
-  (6, 'There used to be a lot of tourists'),
-  (7, 'There''s no signal.'),
-  (8, 'It was Ken''s birthday yesterday. We had a party.'),
-  (9, 'There''s sure to be a car park'),
-  (10, 'I''m sorry about what happened. It was my fault.'),
-  (11, 'there would be somebody to meet me')
-) as v(sentence_number, correct_answer) on v.sentence_number = sen.sentence_number;
+  (1, 'OK', array['It''s a long way from my house to the nearest shop.']::text[]),
+  (2, 'there will be an opportunity', array[]::text[]),
+  (3, 'There must have been a reason.', array[]::text[]),
+  (4, 'OK', array['I like where I live, but it would be nicer to live by the sea.']::text[]),
+  (5, 'OK', array['How long is it since you last went to the theatre?']::text[]),
+  (6, 'There used to be a lot of tourists', array[]::text[]),
+  (7, 'There''s no signal.', array[]::text[]),
+  (8, 'OK', array['It was Ken''s birthday yesterday. We had a party.']::text[]),
+  (9, 'There''s sure to be a car park', array[]::text[]),
+  (10, 'OK', array['I''m sorry about what happened. It was my fault.']::text[]),
+  (11, 'there would be somebody to meet me', array[]::text[])
+) as v(sentence_number, correct_answer, accepted_alternatives) on v.sentence_number = sen.sentence_number;
 
 -- ============================================================
 -- Unit 85: some and any

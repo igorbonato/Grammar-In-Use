@@ -156,11 +156,11 @@ select es.id, u.id from exercise_sets es join units u on u.slug = 'unit-104' whe
 insert into exercise_sentences (exercise_set_id, sentence_number, template, hint, order_index)
 select es.id, v.n, v.template, v.hint, v.n - 1
 from exercise_sets es, (values
-  (1, 'Anna''s English is quite good. What does quite mean here?', '(more than a little / completely)'),
-  (2, 'I couldn''t believe it. It was quite incredible. What does quite mean here?', '(more than a little / completely)'),
-  (3, 'My bedroom is quite big. What does quite mean here?', '(more than a little / completely)'),
-  (4, 'I''m quite tired. I think I''ll go to bed. What does quite mean here?', '(more than a little / completely)'),
-  (5, 'I quite agree with you. What does quite mean here?', '(more than a little / completely)')
+  (1, 'Anna''s English is quite good. What does quite mean here? {0}', '(more than a little / completely)'),
+  (2, 'I couldn''t believe it. It was quite incredible. What does quite mean here? {0}', '(more than a little / completely)'),
+  (3, 'My bedroom is quite big. What does quite mean here? {0}', '(more than a little / completely)'),
+  (4, 'I''m quite tired. I think I''ll go to bed. What does quite mean here? {0}', '(more than a little / completely)'),
+  (5, 'I quite agree with you. What does quite mean here? {0}', '(more than a little / completely)')
 ) as v(n, template, hint)
 where es.title = '104.4';
 
