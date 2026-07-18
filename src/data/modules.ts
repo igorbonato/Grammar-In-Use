@@ -227,4 +227,11 @@ export const modules: Module[] = [
       { id: 'unit-136', title: 'Verb + preposition 5 in/into/with/to/on', shortTitle: 'Unit 136' },
     ],
   },
+  {
+    id: 'phrasal-verbs',
+    title: 'Phrasal verbs',
+    units: [
+      { id: 'unit-137', title: 'Phrasal verbs 1 Introduction', shortTitle: 'Unit 137' },
+    ],
+  },
 ]
