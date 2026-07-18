@@ -167,6 +167,7 @@ export const modules: Module[] = [
       { id: 'unit-94', title: 'Relative clauses 3: whose/whom/where', shortTitle: 'Unit 94' },
       { id: 'unit-95', title: 'Relative clauses 4: extra information clauses (1)', shortTitle: 'Unit 95' },
       { id: 'unit-96', title: 'Relative clauses 5: extra information clauses (2)', shortTitle: 'Unit 96' },
+      { id: 'unit-97', title: '-ing and -ed clauses (the woman talking to Tom, the boy injured in the accident)', shortTitle: 'Unit 97' },
     ],
   },
 ]
