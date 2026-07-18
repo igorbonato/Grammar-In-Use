@@ -101,7 +101,24 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
     - [x] Unit 118 (like / as if) — `0041_seed_conjunctions_and_prepositions_slice5.sql`
     - [x] Unit 119 (during, for and while) — `0042_seed_conjunctions_and_prepositions_slice6.sql`
     - [x] Unit 120 (by and until, by the time) — `0043_seed_conjunctions_and_prepositions_slice7.sql`
-  - [ ] Demais módulos (Prepositions, Phrasal verbs) ainda pendentes
+  - [x] "Prepositions" (units 121-136, 1 módulo só, semeado 1 unit por fatia)
+    - [x] Unit 121 (at/on/in time) — `0044_seed_prepositions_slice1.sql`
+    - [x] Unit 122 (on time/in time, at the end/in the end) — `0045_seed_prepositions_slice2.sql`
+    - [x] Unit 123 (in/at/on position 1) — `0046_seed_prepositions_slice3.sql`
+    - [x] Unit 124 (in/at/on position 2) — `0047_seed_prepositions_slice4.sql`
+    - [x] Unit 125 (in/at/on position 3) — `0048_seed_prepositions_slice5.sql`
+    - [x] Unit 126 (to, at, in and into) — `0049_seed_prepositions_slice6.sql`
+    - [x] Unit 127 (in/on/at other uses) — `0050_seed_prepositions_slice7.sql`
+    - [x] Unit 128 (by) — `0051_seed_prepositions_slice8.sql`
+    - [x] Unit 129 (Noun + preposition) — `0052_seed_prepositions_slice9.sql`
+    - [x] Unit 130 (Adjective + preposition 1) — `0053_seed_prepositions_slice10.sql`
+    - [x] Unit 131 (Adjective + preposition 2) — `0054_seed_prepositions_slice11.sql`
+    - [x] Unit 132 (Verb + preposition 1: to/at) — `0055_seed_prepositions_slice12.sql`
+    - [x] Unit 133 (Verb + preposition 2: about/for/of/after) — `0056_seed_prepositions_slice13.sql`
+    - [x] Unit 134 (Verb + preposition 3: about/of) — `0057_seed_prepositions_slice14.sql`
+    - [x] Unit 135 (Verb + preposition 4: of/for/from/on) — `0058_seed_prepositions_slice15.sql`
+    - [x] Unit 136 (Verb + preposition 5: in/into/with/to/on) — `0059_seed_prepositions_slice16.sql`
+  - [ ] Demais módulos (Phrasal verbs) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
