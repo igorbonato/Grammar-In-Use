@@ -191,4 +191,12 @@ export const modules: Module[] = [
       { id: 'unit-112', title: 'even', shortTitle: 'Unit 112' },
     ],
   },
+  {
+    id: 'conjunctions-and-prepositions',
+    title: 'Conjunctions and prepositions',
+    units: [
+      { id: 'unit-113', title: 'in spite of despite (although though even though)', shortTitle: 'Unit 113' },
+      { id: 'unit-114', title: 'in case', shortTitle: 'Unit 114' },
+    ],
+  },
 ]
