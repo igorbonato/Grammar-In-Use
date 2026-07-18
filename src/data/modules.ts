@@ -180,6 +180,7 @@ export const modules: Module[] = [
       { id: 'unit-101', title: 'Adjectives and adverbs 2 (well, fast, late, hard/hardly)', shortTitle: 'Unit 101' },
       { id: 'unit-102', title: 'so and such', shortTitle: 'Unit 102' },
       { id: 'unit-103', title: 'enough and too', shortTitle: 'Unit 103' },
+      { id: 'unit-104', title: 'quite, pretty, rather and fairly', shortTitle: 'Unit 104' },
     ],
   },
 ]
