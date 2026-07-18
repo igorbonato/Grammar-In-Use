@@ -183,6 +183,8 @@ export const modules: Module[] = [
       { id: 'unit-104', title: 'quite, pretty, rather and fairly', shortTitle: 'Unit 104' },
       { id: 'unit-105', title: 'Comparative 1 (cheaper, more expensive etc.)', shortTitle: 'Unit 105' },
       { id: 'unit-106', title: 'Comparative 2 (much better / any better etc.)', shortTitle: 'Unit 106' },
+      { id: 'unit-107', title: 'Comparative 3 (as ... as / than)', shortTitle: 'Unit 107' },
+      { id: 'unit-108', title: 'Superlative (the longest / the most enjoyable etc.)', shortTitle: 'Unit 108' },
     ],
   },
 ]
