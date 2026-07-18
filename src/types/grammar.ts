@@ -94,3 +94,39 @@ export type StudyGuideGroup = {
   moduleTitle: string
   questions: StudyGuideQuestion[]
 }
+
+export type AppendixTableRow = {
+  id: string
+  colA: string
+  colB: string
+  colC: string | null
+  unitRefs: number[]
+}
+
+export type IrregularVerb = {
+  id: string
+  infinitive: string
+  pastSimple: string
+  pastParticiple: string
+  note: string | null
+}
+
+export type AppendixSubsection = {
+  id: string
+  label: string | null
+  heading: string
+  explanation: string | null
+  unitRefs: number[]
+  examples: TheoryExample[]
+  columnHeaders: string[] | null
+  tableRows: AppendixTableRow[]
+  irregularVerbs: IrregularVerb[]
+}
+
+export type AppendixSection = {
+  id: string
+  number: number
+  slug: string
+  title: string
+  subsections: AppendixSubsection[]
+}
