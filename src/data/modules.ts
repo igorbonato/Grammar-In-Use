@@ -170,4 +170,12 @@ export const modules: Module[] = [
       { id: 'unit-97', title: '-ing and -ed clauses (the woman talking to Tom, the boy injured in the accident)', shortTitle: 'Unit 97' },
     ],
   },
+  {
+    id: 'adjectives-and-adverbs',
+    title: 'Adjectives and adverbs',
+    units: [
+      { id: 'unit-98', title: 'Adjectives ending in -ing and -ed (boring/bored etc.)', shortTitle: 'Unit 98' },
+      { id: 'unit-99', title: 'Adjectives: a nice new house, you look tired', shortTitle: 'Unit 99' },
+    ],
+  },
 ]
