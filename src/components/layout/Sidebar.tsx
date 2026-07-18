@@ -5,13 +5,15 @@ import ResourceLinks from './ResourceLinks'
 
 type Props = {
   modules: Module[]
-  activeUnit: Unit
+  activeUnit: Unit | null
   onSelectUnit: (moduleId: string, unit: Unit) => void
+  studyGuideActive: boolean
+  onSelectStudyGuide: () => void
   open: boolean
   onToggle: () => void
 }
 
-export default function Sidebar({ modules, activeUnit, onSelectUnit, open, onToggle }: Props) {
+export default function Sidebar({ modules, activeUnit, onSelectUnit, studyGuideActive, onSelectStudyGuide, open, onToggle }: Props) {
   return (
     <>
       {/* Sidebar */}
@@ -46,8 +48,14 @@ export default function Sidebar({ modules, activeUnit, onSelectUnit, open, onTog
               <div className="px-2 mb-2 text-[10px] font-semibold uppercase tracking-widest text-blue-300/50">
                 Assessment
               </div>
-              <button className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium text-white/80 hover:text-white transition-all group"
-                style={{ background: 'rgba(74, 141, 247, 0.15)', border: '1px solid rgba(74, 141, 247, 0.3)' }}>
+              <button
+                onClick={onSelectStudyGuide}
+                aria-current={studyGuideActive ? 'page' : undefined}
+                className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium text-white/80 hover:text-white transition-all group"
+                style={{
+                  background: studyGuideActive ? 'rgba(74, 141, 247, 0.3)' : 'rgba(74, 141, 247, 0.15)',
+                  border: studyGuideActive ? '1px solid rgba(74, 141, 247, 0.6)' : '1px solid rgba(74, 141, 247, 0.3)',
+                }}>
                 <span className="text-cambridge-400 group-hover:scale-110 transition-transform">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                     <path d="M7.5 1.5L9.5 5.5L14 6.18L10.75 9.32L11.5 13.82L7.5 11.77L3.5 13.82L4.25 9.32L1 6.18L5.5 5.5L7.5 1.5Z"
@@ -55,10 +63,6 @@ export default function Sidebar({ modules, activeUnit, onSelectUnit, open, onTog
                   </svg>
                 </span>
                 Study Guide
-                <span className="ml-auto text-[10px] px-1.5 py-0.5 rounded font-semibold"
-                  style={{ background: 'rgba(74, 141, 247, 0.25)', color: '#7db0ff' }}>
-                  NEW
-                </span>
               </button>
             </div>
 

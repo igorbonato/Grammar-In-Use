@@ -3,7 +3,7 @@ import type { Module, Unit } from '../../types/grammar'
 
 type Props = {
   modules: Module[]
-  activeUnit: Unit
+  activeUnit: Unit | null
   onSelectUnit: (moduleId: string, unit: Unit) => void
 }
 
@@ -40,7 +40,7 @@ export default function SidebarAccordion({ modules, activeUnit, onSelectUnit }: 
             {expandedModules.has(mod.id) && (
               <div className="ml-3 mt-0.5 border-l border-white/10 pl-3 space-y-0.5">
                 {mod.units.map(unit => {
-                  const isActive = activeUnit.id === unit.id
+                  const isActive = activeUnit?.id === unit.id
                   return (
                     <button
                       key={unit.id}

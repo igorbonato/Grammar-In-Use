@@ -72,3 +72,25 @@ export type ExerciseSet = {
   instruction: string | null
   sentences: ExerciseSentence[]
 }
+
+export type StudyGuideOption = {
+  id: string
+  letter: string
+  text: string
+  isCorrect: boolean
+}
+
+export type StudyGuideQuestion = {
+  id: string
+  questionNumber: string
+  // indexed placeholder, single {0} — see src/lib/exerciseTemplate.ts
+  template: string
+  studyUnits: number[]
+  options: StudyGuideOption[]
+}
+
+export type StudyGuideGroup = {
+  moduleId: string
+  moduleTitle: string
+  questions: StudyGuideQuestion[]
+}
