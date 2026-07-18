@@ -158,4 +158,11 @@ export const modules: Module[] = [
       { id: 'unit-91', title: 'each and every', shortTitle: 'Unit 91' },
     ],
   },
+  {
+    id: 'relative-clauses',
+    title: 'Relative clauses',
+    units: [
+      { id: 'unit-92', title: 'Relative clauses 1: clauses with who/that/which', shortTitle: 'Unit 92' },
+    ],
+  },
 ]
