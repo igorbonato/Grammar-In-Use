@@ -176,6 +176,8 @@ export const modules: Module[] = [
     units: [
       { id: 'unit-98', title: 'Adjectives ending in -ing and -ed (boring/bored etc.)', shortTitle: 'Unit 98' },
       { id: 'unit-99', title: 'Adjectives: a nice new house, you look tired', shortTitle: 'Unit 99' },
+      { id: 'unit-100', title: 'Adjectives and adverbs 1 (quick/quickly)', shortTitle: 'Unit 100' },
+      { id: 'unit-101', title: 'Adjectives and adverbs 2 (well, fast, late, hard/hardly)', shortTitle: 'Unit 101' },
     ],
   },
 ]
