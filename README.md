@@ -84,7 +84,16 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
     - [x] Unit 95 (extra information clauses 1) — `0026_seed_relative_clauses_slice4.sql`
     - [x] Unit 96 (extra information clauses 2) — `0027_seed_relative_clauses_slice5.sql`
     - [x] Unit 97 (-ing/-ed clauses, there is + noun + participle) — `0028_seed_relative_clauses_slice6.sql`
-  - [ ] Demais módulos (Adjectives and adverbs, Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
+  - [x] "Adjectives and adverbs" (units 98-112, 1 módulo só, semeado em fatias)
+    - [x] Units 98-99 (-ing/-ed adjectives, adjective order) — `0029_seed_adjectives_and_adverbs_slice1.sql`
+    - [x] Units 100-101 (adjectives and adverbs 1/2) — `0030_seed_adjectives_and_adverbs_slice2.sql`
+    - [x] Units 102-103 (so/such, enough/too) — `0031_seed_adjectives_and_adverbs_slice3.sql`
+    - [x] Unit 104 (quite, pretty, rather, fairly) — `0032_seed_adjectives_and_adverbs_slice4.sql`
+    - [x] Units 105-106 (comparative 1/2) — `0033_seed_adjectives_and_adverbs_slice5.sql`
+    - [x] Units 107-108 (comparative 3, superlative) — `0034_seed_adjectives_and_adverbs_slice6.sql`
+    - [x] Units 109-110 (word order 1/2) — `0035_seed_adjectives_and_adverbs_slice7.sql`
+    - [x] Units 111-112 (still/any more/yet/already, even) — `0036_seed_adjectives_and_adverbs_slice8.sql`
+  - [ ] Demais módulos (Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
