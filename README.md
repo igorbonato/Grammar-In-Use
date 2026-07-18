@@ -53,7 +53,7 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
 - [x] **Marco 1** — Refatoração do front-end em componentes modulares
 - [x] **Marco 2** — Modelagem do banco de dados no Supabase (`supabase/migrations/0001_init.sql`)
 - [x] **Marco 3** — Integração de estado (Zustand + TanStack Query), cliente Supabase e auth anônima
-- [ ] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo
+- [x] **Marco 4** — Ingestão de conteúdo dos PDFs módulo a módulo (livro completo, units 1-145)
   - [x] "Present and past" (units 1-6) — `0003_seed_present_and_past.sql`
   - [x] "Present perfect and past" (units 7-18) — `0004_seed_present_perfect_and_past.sql`
   - [x] "Future" (units 19-25) — `0005_seed_future.sql`
@@ -118,7 +118,17 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
     - [x] Unit 134 (Verb + preposition 3: about/of) — `0057_seed_prepositions_slice14.sql`
     - [x] Unit 135 (Verb + preposition 4: of/for/from/on) — `0058_seed_prepositions_slice15.sql`
     - [x] Unit 136 (Verb + preposition 5: in/into/with/to/on) — `0059_seed_prepositions_slice16.sql`
-  - [ ] Demais módulos (Phrasal verbs) ainda pendentes
+  - [x] "Phrasal verbs" (units 137-145, módulo final do livro, semeado 1 unit por fatia)
+    - [x] Unit 137 (Phrasal verbs 1: introduction) — `0060_seed_phrasal_verbs_slice1.sql`
+    - [x] Unit 138 (Phrasal verbs 2: in/out) — `0061_seed_phrasal_verbs_slice2.sql`
+    - [x] Unit 139 (Phrasal verbs 3: out) — `0062_seed_phrasal_verbs_slice3.sql`
+    - [x] Unit 140 (Phrasal verbs 4: on/off (1)) — `0063_seed_phrasal_verbs_slice4.sql`
+    - [x] Unit 141 (Phrasal verbs 5: on/off (2)) — `0064_seed_phrasal_verbs_slice5.sql`
+    - [x] Unit 142 (Phrasal verbs 6: up/down) — `0065_seed_phrasal_verbs_slice6.sql`
+    - [x] Unit 143 (Phrasal verbs 7: up (1)) — `0066_seed_phrasal_verbs_slice7.sql`
+    - [x] Unit 144 (Phrasal verbs 8: up (2)) — `0067_seed_phrasal_verbs_slice8.sql`
+    - [x] Unit 145 (Phrasal verbs 9: away/back) — `0068_seed_phrasal_verbs_slice9.sql` — **última unidade do livro**
+  - **Marco 4 completo: todas as 145 units do livro foram semeadas no banco.**
 
 ## Roadmap Futuro: Aba de Fonética
 
