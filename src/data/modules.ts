@@ -185,6 +185,8 @@ export const modules: Module[] = [
       { id: 'unit-106', title: 'Comparative 2 (much better / any better etc.)', shortTitle: 'Unit 106' },
       { id: 'unit-107', title: 'Comparative 3 (as ... as / than)', shortTitle: 'Unit 107' },
       { id: 'unit-108', title: 'Superlative (the longest / the most enjoyable etc.)', shortTitle: 'Unit 108' },
+      { id: 'unit-109', title: 'Word order 1: verb + object; place and time', shortTitle: 'Unit 109' },
+      { id: 'unit-110', title: 'Word order 2: adverbs with the verb', shortTitle: 'Unit 110' },
     ],
   },
 ]
