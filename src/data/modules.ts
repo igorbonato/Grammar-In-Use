@@ -181,6 +181,8 @@ export const modules: Module[] = [
       { id: 'unit-102', title: 'so and such', shortTitle: 'Unit 102' },
       { id: 'unit-103', title: 'enough and too', shortTitle: 'Unit 103' },
       { id: 'unit-104', title: 'quite, pretty, rather and fairly', shortTitle: 'Unit 104' },
+      { id: 'unit-105', title: 'Comparative 1 (cheaper, more expensive etc.)', shortTitle: 'Unit 105' },
+      { id: 'unit-106', title: 'Comparative 2 (much better / any better etc.)', shortTitle: 'Unit 106' },
     ],
   },
 ]
