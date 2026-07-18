@@ -198,6 +198,7 @@ export const modules: Module[] = [
       { id: 'unit-113', title: 'in spite of despite (although though even though)', shortTitle: 'Unit 113' },
       { id: 'unit-114', title: 'in case', shortTitle: 'Unit 114' },
       { id: 'unit-115', title: 'unless', shortTitle: 'Unit 115' },
+      { id: 'unit-116', title: 'as (as I walked ... / as I was ... etc.)', shortTitle: 'Unit 116' },
     ],
   },
 ]
