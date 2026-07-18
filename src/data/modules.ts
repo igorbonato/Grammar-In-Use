@@ -221,6 +221,7 @@ export const modules: Module[] = [
       { id: 'unit-130', title: 'Adjective + preposition 1', shortTitle: 'Unit 130' },
       { id: 'unit-131', title: 'Adjective + preposition 2', shortTitle: 'Unit 131' },
       { id: 'unit-132', title: 'Verb + preposition 1 to and at', shortTitle: 'Unit 132' },
+      { id: 'unit-133', title: 'Verb + preposition 2 about/for/of/after', shortTitle: 'Unit 133' },
     ],
   },
 ]
