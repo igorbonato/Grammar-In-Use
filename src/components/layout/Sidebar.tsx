@@ -12,11 +12,23 @@ type Props = {
   onSelectUnit: (moduleId: string, unit: Unit) => void
   studyGuideActive: boolean
   onSelectStudyGuide: () => void
+  additionalExercisesActive: boolean
+  onSelectAdditionalExercises: () => void
   open: boolean
   onToggle: () => void
 }
 
-export default function Sidebar({ modules, activeUnit, onSelectUnit, studyGuideActive, onSelectStudyGuide, open, onToggle }: Props) {
+export default function Sidebar({
+  modules,
+  activeUnit,
+  onSelectUnit,
+  studyGuideActive,
+  onSelectStudyGuide,
+  additionalExercisesActive,
+  onSelectAdditionalExercises,
+  open,
+  onToggle,
+}: Props) {
   const userId = useAuthStore(state => state.user?.id ?? null)
   const { percent, completedUnits, totalUnits } = useOverallProgress(userId)
 
@@ -69,6 +81,22 @@ export default function Sidebar({ modules, activeUnit, onSelectUnit, studyGuideA
                   </svg>
                 </span>
                 Study Guide
+              </button>
+              <button
+                onClick={onSelectAdditionalExercises}
+                aria-current={additionalExercisesActive ? 'page' : undefined}
+                className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium text-white/80 hover:text-white transition-all group mt-2"
+                style={{
+                  background: additionalExercisesActive ? 'rgba(74, 141, 247, 0.3)' : 'rgba(74, 141, 247, 0.15)',
+                  border: additionalExercisesActive ? '1px solid rgba(74, 141, 247, 0.6)' : '1px solid rgba(74, 141, 247, 0.3)',
+                }}>
+                <span className="text-cambridge-400 group-hover:scale-110 transition-transform">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M2.5 2.5h10v10h-10z" stroke="#4a8df7" strokeWidth="1.4" strokeLinejoin="round" />
+                    <path d="M5 5.5h5M5 7.5h5M5 9.5h3" stroke="#4a8df7" strokeWidth="1.2" strokeLinecap="round" />
+                  </svg>
+                </span>
+                Additional Exercises
               </button>
             </div>
 

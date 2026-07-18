@@ -27,17 +27,15 @@ export default function ExercisesPanel({ unit }: { unit: Unit }) {
   }, [unit.id, resetForm])
 
   const mainSet = exerciseSets?.find(set => set.kind === 'main')
-  const additionalSets = exerciseSets?.filter(set => set.kind === 'additional') ?? []
-  const mainSentences = mainSet?.sentences ?? []
-  const allSentences = [...mainSentences, ...additionalSets.flatMap(set => set.sentences)]
-  const blanks = allBlanks(allSentences)
+  const sentences = mainSet?.sentences ?? []
+  const blanks = allBlanks(sentences)
   const checked = feedback === 'checked'
-  const score = checked ? computeScore(allSentences, answers) : null
+  const score = checked ? computeScore(sentences, answers) : null
   const completedCount = blanks.filter(blank => (answers[blank.id] ?? '').trim()).length
 
   const handleCheck = () => {
     check()
-    const result = computeScore(allSentences, answers)
+    const result = computeScore(sentences, answers)
     if (userId) saveProgress({ correct: result.correct, total: result.total })
   }
 
@@ -49,7 +47,7 @@ export default function ExercisesPanel({ unit }: { unit: Unit }) {
     )
   }
 
-  if (allSentences.length === 0) {
+  if (sentences.length === 0) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-1 bg-[#f8faff] text-gray-400 text-sm">
         <span>Exercises for this unit are coming soon.</span>
@@ -84,54 +82,26 @@ export default function ExercisesPanel({ unit }: { unit: Unit }) {
         </div>
       </div>
 
+      {/* Instruction */}
+      {mainSet?.instruction && (
+        <div className="px-7 py-3 bg-white border-b border-gray-100">
+          <p className="text-[13px] text-gray-500">{mainSet.instruction}</p>
+        </div>
+      )}
+
       {/* Exercises list */}
       <div className="flex-1 overflow-y-auto px-7 py-5 pb-24 space-y-4">
-        {mainSentences.length > 0 && (
-          <>
-            {mainSet?.instruction && (
-              <p className="text-[13px] text-gray-500">{mainSet.instruction}</p>
-            )}
-            {mainSentences.map((sentence, idx) => (
-              <ExerciseItem
-                key={sentence.id}
-                sentence={sentence}
-                index={idx}
-                answers={answers}
-                checked={checked}
-                hintVisible={!!showHints[sentence.id]}
-                onChangeBlank={setAnswer}
-                onShowHint={() => showHint(sentence.id)}
-              />
-            ))}
-          </>
-        )}
-
-        {additionalSets.map(set => (
-          <div key={set.id} className="pt-2">
-            <div className="flex items-center gap-2 mb-3 pt-4 border-t border-gray-200">
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">
-                Additional exercise
-              </span>
-              {set.title && <span className="text-[12px] text-gray-300">— {set.title}</span>}
-            </div>
-            {set.instruction && (
-              <p className="text-[13px] text-gray-500 mb-3">{set.instruction}</p>
-            )}
-            <div className="space-y-4">
-              {set.sentences.map((sentence, idx) => (
-                <ExerciseItem
-                  key={sentence.id}
-                  sentence={sentence}
-                  index={idx}
-                  answers={answers}
-                  checked={checked}
-                  hintVisible={!!showHints[sentence.id]}
-                  onChangeBlank={setAnswer}
-                  onShowHint={() => showHint(sentence.id)}
-                />
-              ))}
-            </div>
-          </div>
+        {sentences.map((sentence, idx) => (
+          <ExerciseItem
+            key={sentence.id}
+            sentence={sentence}
+            index={idx}
+            answers={answers}
+            checked={checked}
+            hintVisible={!!showHints[sentence.id]}
+            onChangeBlank={setAnswer}
+            onShowHint={() => showHint(sentence.id)}
+          />
         ))}
       </div>
 

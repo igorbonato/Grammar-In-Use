@@ -3,6 +3,7 @@ import AppShell from './AppShell'
 import UnitPage from './UnitPage'
 import StudyGuidePage from './StudyGuidePage'
 import AppendixPage from './AppendixPage'
+import AdditionalExercisesPage from './AdditionalExercisesPage'
 import { modules } from '../data/modules'
 
 const firstModule = modules[0]
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: '/guia-de-estudo',
         element: <StudyGuidePage />,
+      },
+      {
+        path: '/exercicios-adicionais',
+        element: <AdditionalExercisesPage />,
       },
       {
         path: '/apendice',

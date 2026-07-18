@@ -73,6 +73,19 @@ export type ExerciseSet = {
   sentences: ExerciseSentence[]
 }
 
+export type AdditionalExercise = {
+  id: string
+  title: string | null
+  instruction: string | null
+  sentences: ExerciseSentence[]
+  unitRefs: number[]
+}
+
+export type AdditionalExerciseGroup = {
+  sourceRef: string
+  exercises: AdditionalExercise[]
+}
+
 export type StudyGuideOption = {
   id: string
   letter: string

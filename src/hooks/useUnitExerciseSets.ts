@@ -54,7 +54,7 @@ async function fetchUnitExerciseSets(unitSlug: string): Promise<ExerciseSet[]> {
 
   const sets = (data ?? [])
     .map(row => row.exercise_sets as unknown as RawSet | null)
-    .filter((set): set is RawSet => set != null)
+    .filter((set): set is RawSet => set != null && set.kind !== 'additional')
 
   return [...sets]
     .sort((a, b) => a.order_index - b.order_index)

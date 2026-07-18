@@ -47,6 +47,8 @@ export default function AppShell() {
         onSelectUnit={handleSelectUnit}
         studyGuideActive={location.pathname === '/guia-de-estudo'}
         onSelectStudyGuide={() => navigate('/guia-de-estudo')}
+        additionalExercisesActive={location.pathname === '/exercicios-adicionais'}
+        onSelectAdditionalExercises={() => navigate('/exercicios-adicionais')}
         open={sidebarOpen}
         onToggle={() => setSidebarOpen(o => !o)}
       />
