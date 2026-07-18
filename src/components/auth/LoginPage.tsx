@@ -1,10 +1,6 @@
-import { useAuthStore } from '../../store/useAuthStore'
-import GoogleButton from './GoogleButton'
 import EmailPasswordForm from './EmailPasswordForm'
 
 export default function LoginPage() {
-  const signInWithGoogle = useAuthStore(state => state.signInWithGoogle)
-
   return (
     <div className="flex-1 flex items-center justify-center bg-[#f4f7fc] p-6">
       <div className="w-full max-w-[380px]">
@@ -22,14 +18,6 @@ export default function LoginPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 p-6" style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.04)' }}>
-          <GoogleButton onClick={signInWithGoogle} />
-
-          <div className="flex items-center gap-3 my-5">
-            <div className="flex-1 h-px bg-gray-200" />
-            <span className="text-[12px] text-gray-400">ou</span>
-            <div className="flex-1 h-px bg-gray-200" />
-          </div>
-
           <EmailPasswordForm />
         </div>
       </div>

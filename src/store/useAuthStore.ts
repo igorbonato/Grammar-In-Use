@@ -8,7 +8,6 @@ type AuthState = {
   isLoading: boolean
   authError: string | null
   initialize: () => void
-  signInWithGoogle: () => Promise<void>
   signInWithPassword: (email: string, password: string) => Promise<void>
   signUpWithPassword: (email: string, password: string) => Promise<{ needsEmailConfirmation: boolean }>
   signOut: () => Promise<void>
@@ -34,15 +33,6 @@ export const useAuthStore = create<AuthState>((set) => ({
     supabase.auth.getSession().then(({ data: { session } }) => {
       set({ session, user: session?.user ?? null, isLoading: false })
     })
-  },
-
-  signInWithGoogle: async () => {
-    set({ authError: null })
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: window.location.origin },
-    })
-    if (error) set({ authError: error.message })
   },
 
   signInWithPassword: async (email, password) => {
