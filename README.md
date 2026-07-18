@@ -71,7 +71,13 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
     - [x] Units 74-76 (the 2/3/4) — `0015_seed_articles_and_nouns_slice3.sql`
     - [x] Units 77-78 (names with/without the) — `0016_seed_articles_and_nouns_slice4.sql`
     - [x] Units 79-81 (singular/plural, noun+noun, -'s and of...) — `0017_seed_articles_and_nouns_slice5.sql`
-  - [ ] Demais módulos (Pronouns and determiners, Relative clauses, Adjectives and adverbs, Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
+  - [x] "Pronouns and determiners" (units 82-91, 1 módulo só, semeado em fatias)
+    - [x] Units 82-83 (myself/yourself..., on my own / by myself) — `0018_seed_pronouns_and_determiners_slice1.sql`
+    - [x] Units 84-85 (there.../it..., some and any) — `0019_seed_pronouns_and_determiners_slice2.sql`
+    - [x] Units 86-87 (no/none/any, much/many/little/few/a lot/plenty) — `0020_seed_pronouns_and_determiners_slice3.sql`
+    - [x] Units 88-89 (all/all of..., either/either of) — `0021_seed_pronouns_and_determiners_slice4.sql`
+    - [x] Units 90-91 (all every whole, each and every) — `0022_seed_pronouns_and_determiners_slice5.sql`
+  - [ ] Demais módulos (Relative clauses, Adjectives and adverbs, Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
