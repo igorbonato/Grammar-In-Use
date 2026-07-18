@@ -236,6 +236,7 @@ export const modules: Module[] = [
       { id: 'unit-139', title: 'Phrasal verbs 3 out', shortTitle: 'Unit 139' },
       { id: 'unit-140', title: 'Phrasal verbs 4 on/off (1)', shortTitle: 'Unit 140' },
       { id: 'unit-141', title: 'Phrasal verbs 5 on/off (2)', shortTitle: 'Unit 141' },
+      { id: 'unit-142', title: 'Phrasal verbs 6 up/down', shortTitle: 'Unit 142' },
     ],
   },
 ]
