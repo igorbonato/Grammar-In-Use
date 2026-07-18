@@ -1,7 +1,10 @@
 import type { Module, Unit } from '../../types/grammar'
+import { useAuthStore } from '../../store/useAuthStore'
+import { useOverallProgress } from '../../hooks/useOverallProgress'
 import SidebarAccordion from './SidebarAccordion'
 import SidebarProgress from './SidebarProgress'
 import ResourceLinks from './ResourceLinks'
+import UserMenu from './UserMenu'
 
 type Props = {
   modules: Module[]
@@ -14,6 +17,9 @@ type Props = {
 }
 
 export default function Sidebar({ modules, activeUnit, onSelectUnit, studyGuideActive, onSelectStudyGuide, open, onToggle }: Props) {
+  const userId = useAuthStore(state => state.user?.id ?? null)
+  const { percent, completedUnits, totalUnits } = useOverallProgress(userId)
+
   return (
     <>
       {/* Sidebar */}
@@ -70,7 +76,8 @@ export default function Sidebar({ modules, activeUnit, onSelectUnit, studyGuideA
             <ResourceLinks />
           </div>
 
-          <SidebarProgress percent={8} completedUnits={4} totalUnits={145} />
+          <UserMenu />
+          <SidebarProgress percent={percent} completedUnits={completedUnits} totalUnits={totalUnits} />
         </div>
       </aside>
 

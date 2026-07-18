@@ -6,7 +6,13 @@ type AuthState = {
   session: Session | null
   user: User | null
   isLoading: boolean
+  authError: string | null
   initialize: () => void
+  signInWithGoogle: () => Promise<void>
+  signInWithPassword: (email: string, password: string) => Promise<void>
+  signUpWithPassword: (email: string, password: string) => Promise<{ needsEmailConfirmation: boolean }>
+  signOut: () => Promise<void>
+  clearAuthError: () => void
 }
 
 let initialized = false
@@ -15,6 +21,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   session: null,
   user: null,
   isLoading: true,
+  authError: null,
 
   initialize: () => {
     if (initialized) return
@@ -24,19 +31,39 @@ export const useAuthStore = create<AuthState>((set) => ({
       set({ session, user: session?.user ?? null, isLoading: false })
     })
 
-    supabase.auth.getSession().then(async ({ data: { session } }) => {
-      if (session) {
-        set({ session, user: session.user, isLoading: false })
-        return
-      }
-
-      const { data, error } = await supabase.auth.signInAnonymously()
-      if (error) {
-        console.error('Anonymous sign-in failed:', error.message)
-        set({ isLoading: false })
-        return
-      }
-      set({ session: data.session, user: data.user, isLoading: false })
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      set({ session, user: session?.user ?? null, isLoading: false })
     })
   },
+
+  signInWithGoogle: async () => {
+    set({ authError: null })
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.origin },
+    })
+    if (error) set({ authError: error.message })
+  },
+
+  signInWithPassword: async (email, password) => {
+    set({ authError: null })
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    if (error) set({ authError: error.message })
+  },
+
+  signUpWithPassword: async (email, password) => {
+    set({ authError: null })
+    const { data, error } = await supabase.auth.signUp({ email, password })
+    if (error) {
+      set({ authError: error.message })
+      return { needsEmailConfirmation: false }
+    }
+    return { needsEmailConfirmation: !data.session }
+  },
+
+  signOut: async () => {
+    await supabase.auth.signOut()
+  },
+
+  clearAuthError: () => set({ authError: null }),
 }))

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom'
 import Sidebar from '../components/layout/Sidebar'
+import LoginPage from '../components/auth/LoginPage'
 import { modules } from '../data/modules'
 import { findModuleAndUnit } from '../lib/curriculum'
 import { useAuthStore } from '../store/useAuthStore'
@@ -12,6 +13,8 @@ export default function AppShell() {
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const initializeAuth = useAuthStore(state => state.initialize)
+  const isAuthLoading = useAuthStore(state => state.isLoading)
+  const session = useAuthStore(state => state.session)
 
   useEffect(() => {
     initializeAuth()
@@ -22,6 +25,18 @@ export default function AppShell() {
 
   const handleSelectUnit = (targetModuleId: string, unit: Unit) => {
     navigate(`/modulo/${targetModuleId}/${unit.id}`)
+  }
+
+  if (isAuthLoading) {
+    return <div className="flex h-screen items-center justify-center bg-[#f4f7fc]" />
+  }
+
+  if (!session) {
+    return (
+      <div className="flex h-screen overflow-hidden bg-[#f4f7fc]">
+        <LoginPage />
+      </div>
+    )
   }
 
   return (

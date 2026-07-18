@@ -68,6 +68,7 @@ export function useUnitProgress(unitSlug: string, userId: string | null) {
       saveUnitProgress(unitSlug, userId!, correct, total),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey })
+      queryClient.invalidateQueries({ queryKey: ['overall-progress', userId] })
     },
   })
 
