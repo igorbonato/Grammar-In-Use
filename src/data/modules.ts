@@ -201,6 +201,7 @@ export const modules: Module[] = [
       { id: 'unit-116', title: 'as (as I walked ... / as I was ... etc.)', shortTitle: 'Unit 116' },
       { id: 'unit-117', title: 'like and as', shortTitle: 'Unit 117' },
       { id: 'unit-118', title: 'like / as if', shortTitle: 'Unit 118' },
+      { id: 'unit-119', title: 'during, for and while', shortTitle: 'Unit 119' },
     ],
   },
 ]
