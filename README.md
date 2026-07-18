@@ -93,7 +93,15 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
     - [x] Units 107-108 (comparative 3, superlative) — `0034_seed_adjectives_and_adverbs_slice6.sql`
     - [x] Units 109-110 (word order 1/2) — `0035_seed_adjectives_and_adverbs_slice7.sql`
     - [x] Units 111-112 (still/any more/yet/already, even) — `0036_seed_adjectives_and_adverbs_slice8.sql`
-  - [ ] Demais módulos (Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
+  - [x] "Conjunctions and prepositions" (units 113-120, 1 módulo só, semeado em fatias)
+    - [x] Units 113-114 (in spite of/despite/although, in case) — `0037_seed_conjunctions_and_prepositions_slice1.sql`
+    - [x] Unit 115 (unless) — `0038_seed_conjunctions_and_prepositions_slice2.sql`
+    - [x] Unit 116 (as = at the same time as / because) — `0039_seed_conjunctions_and_prepositions_slice3.sql`
+    - [x] Unit 117 (like and as) — `0040_seed_conjunctions_and_prepositions_slice4.sql`
+    - [x] Unit 118 (like / as if) — `0041_seed_conjunctions_and_prepositions_slice5.sql`
+    - [x] Unit 119 (during, for and while) — `0042_seed_conjunctions_and_prepositions_slice6.sql`
+    - [x] Unit 120 (by and until, by the time) — `0043_seed_conjunctions_and_prepositions_slice7.sql`
+  - [ ] Demais módulos (Prepositions, Phrasal verbs) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
