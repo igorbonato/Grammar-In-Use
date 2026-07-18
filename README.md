@@ -77,7 +77,14 @@ Os PDFs do livro (módulos gramaticais, additional exercises, appendix, etc.) s�
     - [x] Units 86-87 (no/none/any, much/many/little/few/a lot/plenty) — `0020_seed_pronouns_and_determiners_slice3.sql`
     - [x] Units 88-89 (all/all of..., either/either of) — `0021_seed_pronouns_and_determiners_slice4.sql`
     - [x] Units 90-91 (all every whole, each and every) — `0022_seed_pronouns_and_determiners_slice5.sql`
-  - [ ] Demais módulos (Relative clauses, Adjectives and adverbs, Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
+  - [x] "Relative clauses" (units 92-97, 1 módulo só, semeado 1 unit por fatia)
+    - [x] Unit 92 (who/that/which 1) — `0023_seed_relative_clauses_slice1.sql`
+    - [x] Unit 93 (who/that/which 2) — `0024_seed_relative_clauses_slice2.sql`
+    - [x] Unit 94 (whose/whom/where) — `0025_seed_relative_clauses_slice3.sql`
+    - [x] Unit 95 (extra information clauses 1) — `0026_seed_relative_clauses_slice4.sql`
+    - [x] Unit 96 (extra information clauses 2) — `0027_seed_relative_clauses_slice5.sql`
+    - [x] Unit 97 (-ing/-ed clauses, there is + noun + participle) — `0028_seed_relative_clauses_slice6.sql`
+  - [ ] Demais módulos (Adjectives and adverbs, Conjunctions and prepositions, Prepositions, Phrasal verbs) ainda pendentes
 
 ## Roadmap Futuro: Aba de Fonética
 
