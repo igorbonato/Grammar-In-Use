@@ -3,7 +3,10 @@
 -- Sourced from pdf/Additional exercises.pdf (extracted via
 -- `pdftotext -table`). Cross-checked against
 -- pdf/Key to Additional exercises.pdf (plain mode). No worked example
--- this time — the Key starts at item 1, so all 17 items are seeded.
+-- this time — the Key starts at item 1, so all 25 items are seeded
+-- (the Key's answer line wraps a word across two source lines right
+-- after item 17 — easy to mistake for the end of the exercise; always
+-- read past a wrapped line before assuming a Key block is finished).
 --
 -- Safe to re-run: this exercise set deletes itself first (cascades
 -- to its sentences/blanks) before re-inserting.
@@ -39,7 +42,15 @@ from exercise_sets es, (values
   (14, 'If you want to turn the light on, the switch is {0} the wall {1} the door.'),
   (15, 'It was late when we arrived {0} the hotel.'),
   (16, 'I couldn''t decide what to eat. There was nothing {0} the menu that I liked.'),
-  (17, 'We live {0} a tower block. Our apartment is {1} the fifteenth floor.')
+  (17, 'We live {0} a tower block. Our apartment is {1} the fifteenth floor.'),
+  (18, 'Some parts of the film were a bit stupid, but {0} the whole I enjoyed it.'),
+  (19, '''When you paid the restaurant bill, did you pay cash?'' ''No, I paid {0} credit card.'''),
+  (20, '''How did you get here? Did you come {0} the bus?'' ''No, {1} car.'''),
+  (21, 'I watched a really interesting programme {0} TV last night.'),
+  (22, 'Helen works for a large company. She works {0} the customer services department.'),
+  (23, 'Anna spent two years working {0} London before returning {1} Italy.'),
+  (24, 'How was your trip {0} the beach? Did you have a good day?'),
+  (25, 'On our first day in Paris, we went {0} a trip round the city.')
 ) as v(n, template)
 where es.title = 'Additional exercise 34';
 
@@ -64,5 +75,13 @@ join (values
   (14, 0, 'on', array[]::text[]), (14, 1, 'by', array['next to', 'beside']::text[]),
   (15, 0, 'at', array[]::text[]),
   (16, 0, 'on', array[]::text[]),
-  (17, 0, 'in', array[]::text[]), (17, 1, 'on', array[]::text[])
+  (17, 0, 'in', array[]::text[]), (17, 1, 'on', array[]::text[]),
+  (18, 0, 'on', array[]::text[]),
+  (19, 0, 'by', array[]::text[]),
+  (20, 0, 'on', array[]::text[]), (20, 1, 'by', array[]::text[]),
+  (21, 0, 'on', array[]::text[]),
+  (22, 0, 'in', array[]::text[]),
+  (23, 0, 'in', array[]::text[]), (23, 1, 'to', array[]::text[]),
+  (24, 0, 'to', array[]::text[]),
+  (25, 0, 'on', array[]::text[])
 ) as v(sentence_number, blank_index, correct_answer, accepted_alternatives) on v.sentence_number = sen.sentence_number;
